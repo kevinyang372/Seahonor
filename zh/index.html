@@ -33,7 +33,21 @@
         .fwxm .bd .xl6.xs2.tac .pic {
         				height: 100px;
         }
+
+        #gengduo_button {
+        				float: none;
+        				margin-bottom: 30px;
+        }
+
+        #gengduo {
+        				text-align: center;
+        }
 }
+
+#gengduo_button {
+	float: right;
+}
+
 </style>
 
 	<div class="main">
@@ -102,7 +116,7 @@
 					<li class="xs2"><a href="javascript:;"><img src="{$list.image}" alt=""></a></li>
 					<!--/list-->
 					</ul>
-					<div><a href="{$curl.16}" class="button" style="float:right">查看更多</a></div>
+					<div id="gengduo"><a href="{$curl.16}" class="button" id="gengduo_button">查看更多</a></div>
 				</div>
 			</div>
 		</div>
@@ -122,7 +136,7 @@
 					</div>
 				</div>
 			</div>
-			<div style="margin-bottom:70px;"><a href="http://www.seahonor.com/index.php/zh/xyxx/" class="button" style="float:right;margin-right:80px">查看更多</a></div>
+			<div style="margin-bottom:70px;"><a href="http://www.seahonor.com/index.php/zh/xyxx/" id="gengduo_button" class="button" style="float:right;margin-right:80px">查看更多</a></div>
 		</div>
 	</div>
 <!--#include file="footer.html"-->
