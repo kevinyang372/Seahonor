@@ -16,6 +16,18 @@
 <script src="img/swiper.jquery.min.js"></script>
 <script src="img/jquery.mmenu.min.js"></script>
 </head>
+
+<style>
+	@media only screen and (max-width: 820px) {
+	      .icon-bars {
+        				font-size: 25px;
+        }
+        a.mm {
+        				margin-top: 30px;
+        }
+  }
+</style>
+
 <body>
 	<div class="header">
 		<div class="clearfix">
@@ -44,7 +56,7 @@
 		<a class="mm show-l" href="#menu"><span class="icon-bars"></span></a>
 		</div>
 		<div class="swiper-container">
-			<div class="swiper-wrapper">
+			<div id="wrapper" class="swiper-wrapper">
 <?php $tp = model('tags')->get_tpgl();?>
 <!--foreach:{$tp $vo}-->
 <!--if:{$top_category['cid']=='' && $_GET['_action']!='apply'}-->
