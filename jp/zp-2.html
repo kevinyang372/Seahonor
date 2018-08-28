@@ -1,0 +1,26 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="rczp2">
+					<h3>{$info.title}</h3>
+					<div class="info"><b>所属部门：</b>{$info.bm}　　      <b>招聘人数：</b>{$info.rs}　　       <b>工作地点：</b>{$info.dd}</div>
+					<h4>职位要求及描述：</h4>
+					<div class="text">
+						{$info.content}
+					</div>
+					<div class="other">
+						<a href="/index.php/index/apply/zw-{$info.aid}.html"><button class="button">申请职位</button></a> <a href="{$curl.4}"><button class="button">返回</button></a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

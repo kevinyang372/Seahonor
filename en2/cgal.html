@@ -1,0 +1,33 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="list cgal">
+					<div class="collapse">
+<!--foreach:{$loop $vo}-->
+<!--if:{$i==1}-->
+	<div class="panel active">
+<!--{else}-->
+	<div class="panel">
+<!--{/if}-->
+		<div class="panel-head">
+			<h4><span>{$i}</span>{$vo.titlex}</h4>
+		</div>
+		<div class="panel-body">
+			{$vo.description}
+		</div>
+	</div>
+<!--/loop-->
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

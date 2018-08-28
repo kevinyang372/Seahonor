@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>{$common.title}</title>
+	<meta name="keywords" content="{$common.keywords}" />
+	<meta name="description" content="{$common.description}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" href="img/swiper.min.css">
+	<link rel="stylesheet" href="img/pintuer.css">
+	<link rel="stylesheet" href="img/style.css">
+<script src="img/jquery.js"></script>
+<script src="img/pintuer.js"></script>
+<script src="img/swiper.jquery.min.js"></script>
+<script src="img/jquery.mmenu.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="clearfix">
+		<div class="logo float-left"><a href="http://oa.seahonor.com:8081/login/Login.jsp" target="_blank"><img src="img/logo.png" alt=""></a></div>
+		<div class="nav float-right nav-inline pr hidden-l">
+			<ul>
+<!--if:{$top_category['cid']==''}-->
+<li class="on">
+<!--{else}-->
+<li>
+<!--{/if}-->
+<a href="/index.php/en">HOME</a></li>
+<!--list:{table="category" type="top" order="cid asc" limit="5"}-->
+<!--if:{$top_category['cid']==$list['cid']}-->
+<li class="on">
+<!--{else}-->
+<li>
+<!--{/if}-->
+<a href="{$list.curl}">{$list.name}</a></li>
+<!--/list-->
+			</ul>
+			<div class="language">
+				<a href="/">Chinese</a> | <a href="/index.php/en">English</a> | <a href="/index.php/jp">Japanese</a>
+			</div>
+		</div>
+		<a class="mm show-l" href="#menu"><span class="icon-bars"></span></a>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+<?php $tp = model('tags')->get_tpgl();?>
+<!--foreach:{$tp $vo}-->
+<!--if:{$top_category['cid']==''}-->
+<!--if:{$vo['wz']=='0'}-->
+			<div class="swiper-slide"><img src="{$vo.purl}" alt=""></div>
+<!--{/if}-->
+<!--{else}-->
+<!--if:{$vo['wz']==$info['cid'] && $vo['lang']==2}-->
+			<div class="swiper-slide"><img src="{$vo.purl}" alt=""></div>
+<!--{/if}-->
+<!--if:{$_GET['_action']=='apply'}-->
+			<div class="swiper-slide"><img src="img/apply.jpg" alt=""></div>
+<!--{/if}-->
+<!--{/if}-->
+<!--/loop-->
+			</div>
+		</div>
+	</div>
+<div id="menu">
+<ul>
+<li><a href="/index.php/en">HOME</a></li>
+<!--list:{table="category" type="top" order="cid asc" limit="5"}-->
+<li><span><a href="{$list.curl}">{$list.name}</a></span>
+<!--if:{$list['cid']==1 || $list['cid']==2 || $list['cid']==3}-->
+<ul>
+	<!--sublist:{table="category" pid="<$list.cid>" order="cid asc" limit="15"}-->
+	<li><a href="{$sublist.curl}">{$sublist.name}</a></li>
+	<!--/sublist-->
+</ul>
+<!--{/if}-->
+</li>
+<!--/list-->
+<li>
+	<span><a href="/" style="display: inline">Chinese</a> | <a href="/index.php/en" style="display: inline">English</a> | <a href="/index.php/jp" style="display: inline">Japanese</a></span>
+</li>
+</ul>
+</div>
+<!--if:{$top_category['cid']==''}-->
+<script>var mySwiper = new Swiper('.swiper-container', {autoplay: 5000,})</script>
+<!--{/if}-->
+<script>$(function() {$('#menu').mmenu();});</script>

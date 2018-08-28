@@ -1,0 +1,43 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="list wdtd">
+					<ul>
+<!--foreach:{$loop $vo}-->
+<li>
+<div class="pic"><img src="{$vo.zp}" alt=""></div>
+<div class="text">
+<div class="box">
+	<p>{$vo.titlex}</p>
+	<p>{$vo.zw}</p>
+	<p><b>Tel：</b>{$vo.tel}</p>
+	<p><b>Email：</b>{$vo.email}</p>
+	<p class="more">个人介绍</p>
+	<div class="mbox">
+	<p><b>工作经验：</b>{$vo.jy html}</p>
+	<p><b>职业资格：</b>{$vo.zg}</p>
+	<p><b>工作语言：</b>{$vo.yy}</p>
+	</div>
+</div>
+</div>
+</li>
+<!--/loop-->
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+<script type="text/javascript">
+$('.wdtd .text .box .more').click(function() {
+	$(this).parent().toggleClass('on');
+});
+</script>
+</body>
+</html>

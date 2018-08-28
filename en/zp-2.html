@@ -1,0 +1,26 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="rczp2">
+					<h3>{$info.title}</h3>
+					<div class="info"><b>Department：</b>{$info.bm}　　      <b>Recruiting Numbers：</b>{$info.rs}　　       <b>Location：</b>{$info.dd}</div>
+					<h4>Qualifications：</h4>
+					<div class="text">
+						{$info.content}
+					</div>
+					<div class="other">
+						<a href="/index.php/index/apply/zw-{$info.aid}.html"><button class="button">Apply</button></a> <a href="{$curl.4}"><button class="button">Return</button></a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<img src="img/m-4.jpg">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+				<!--if:{$info['pid']==2}-->
+				<div class="page fuwu">
+				<!--{else}-->
+				<div class="page">
+				<!--{/if}-->
+					<div class="hd">{$info.name}</div>
+					<div class="bd">{$info.content}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</body>
+</html>

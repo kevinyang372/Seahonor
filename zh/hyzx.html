@@ -1,0 +1,32 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<img src="img/m-3.jpg">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class = "xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="list cgal">
+					<div class="collapse-toggle">
+<!--foreach:{$loop $vo}-->
+<!--if:{$i==1}-->
+	<div class="panel active">
+<!--{else}-->
+	<div class="panel">
+<!--{/if}-->
+		<div class="panel-head">
+			<a href="{$vo.description}">{$vo.titlex}</a>
+			
+		</div>
+	</div>
+<!--/loop-->
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

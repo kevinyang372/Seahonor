@@ -1,0 +1,31 @@
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="lxwm">
+<!--foreach:{$loop $vo}-->
+<div class="clearfix">
+	<div class="float-left box">
+		<h3>{$vo.title}</h3>
+		<p>地址：{$vo.dz}</p>
+		<p>邮编：{$vo.yb}</p>
+		<p>电话：{$vo.dh}</p>
+		<p>传真：{$vo.cz}</p>
+		<p>邮箱：{$vo.yx}</p>
+		<p><a href="{$vo.aurl}">查看地图  ></a></p>
+	</div>
+	<div class="float-right box"><img src="{$vo.image}" alt=""></div>
+</div>
+<!--/loop-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

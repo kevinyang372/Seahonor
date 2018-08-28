@@ -1,0 +1,8 @@
+.tp{width:420px;height:220px;padding:0 0 10px 10px;}
+.tp li{float:right;width:200px;height:210px;margin:10px 10px 0 0;}
+
+
+
+.parent-div{display:flex;}
+.alignleft{float:left;}
+.alignright{float:right;margin-right:30px;}

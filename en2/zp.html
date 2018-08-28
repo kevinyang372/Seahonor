@@ -1,0 +1,103 @@
+<?php
+foreach ($loop as $key => $value) {
+	if ($value['dd']=='Shanghai') {
+		$t1[$key]=$value;
+	}
+	if ($value['dd']=='Shenzhen') {
+		$t2[$key]=$value;
+	}
+	if ($value['dd']=='Beijing') {
+		$t3[$key]=$value;
+	}
+}
+?>
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="page">
+						<div class="rczp">
+							<div class="box-1">
+{$my.zpen}
+							</div>
+							<div class="box-2">
+								<h3>The job was posted</h3>
+								<div class="tab">
+									<div class="tab-head">
+										<ul class="tab-nav">
+											<li class="active"><a href="#tab-1">Shanghai</a></li>
+											<li><a href="#tab-2">Shenzhen</a></li>
+											<li><a href="#tab-3">Beijing</a></li>
+										</ul>
+									</div>
+									<div class="tab-body">
+										<div class="tab-panel active" id="tab-1">
+											<table class="table table-hover">
+											<tr>
+												<th>Job Title</th>
+												<th>The number of recruitment</th>
+												<th>Place of work</th>
+												<th>Recruitment requirements</th>
+											</tr>
+<!--foreach:{$t1 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">more <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-2">
+											<table class="table table-hover">
+											<tr>
+												<th>Job Title</th>
+												<th>The number of recruitment</th>
+												<th>Place of work</th>
+												<th>Recruitment requirements</th>
+											</tr>
+<!--foreach:{$t2 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">more <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-3">
+											<table class="table table-hover">
+											<tr>
+												<th>Job Title</th>
+												<th>The number of recruitment</th>
+												<th>Place of work</th>
+												<th>Recruitment requirements</th>
+											</tr>
+<!--foreach:{$t3 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">more <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box-3">
+{$my.zpdb}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

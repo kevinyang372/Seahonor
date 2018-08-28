@@ -1,0 +1,108 @@
+<?php
+foreach ($loop as $key => $value) {
+	if ($value['dd']=='上海') {
+		$t1[$key]=$value;
+	}
+	if ($value['dd']=='深圳') {
+		$t2[$key]=$value;
+	}
+	if ($value['dd']=='北京') {
+		$t3[$key]=$value;
+	}
+}
+?>
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="page">
+						<div class="rczp">
+							<div class="box-1">
+							<p>海之信是一家提供审计、税务、会计、咨询、公司秘书服务的综合性专业服务机构，客户主要为跨国企业、大型地产企业、互联网企业、投资基金公司，其中不乏世界500强企业。</p>
+							<p>海之信实行的是年薪制加激励机制的薪酬体系（不实行一般内资所的业务提成制），创造性地将“四大”的年薪制和本土化事务所的激励机制有机结合，在保证员工稳定收入的前提下，极大调动了其工作积极性和主动性，为员工向中外客户提供专业、高效、高附加值服务奠定了坚实基础。</p>
+							<p>目前海之信因各项业务快速发展，诚聘天下英才加盟海之信专业团队，如果您未来有幸加入海之信，您将和许多热情、投入、充满活力、富有开拓精神的同事一起发挥您的才华，您的专业知识、创新能力、服务意识、工作习惯都将得到充分的提升和展现。</p>
+							<p><b>我们非常期待和优秀的您共创美好未来，您还犹豫什么？</b></p>
+							</div>
+							<div class="box-2">
+								<h3>职位发布</h3>
+								<div class="tab">
+									<div class="tab-head">
+										<ul class="tab-nav">
+											<li class="active"><a href="#tab-1">上海</a></li>
+											<li><a href="#tab-2">深圳</a></li>
+											<li><a href="#tab-3">北京</a></li>
+										</ul>
+									</div>
+									<div class="tab-body">
+										<div class="tab-panel active" id="tab-1">
+											<table class="table table-hover">
+											<tr>
+												<th>职位名称</th>
+												<th>招聘人数</th>
+												<th>工作地点</th>
+												<th>招聘要求</th>
+											</tr>
+<!--foreach:{$t1 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">详细 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-2">
+											<table class="table table-hover">
+											<tr>
+												<th>职位名称</th>
+												<th>招聘人数</th>
+												<th>工作地点</th>
+												<th>招聘要求</th>
+											</tr>
+<!--foreach:{$t2 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">详细 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-3">
+											<table class="table table-hover">
+											<tr>
+												<th>职位名称</th>
+												<th>招聘人数</th>
+												<th>工作地点</th>
+												<th>招聘要求</th>
+											</tr>
+<!--foreach:{$t3 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">详细 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box-3">
+								如果对上述职位有兴趣并符合以上要求者, 请点击招聘要求中的“详细”。<br/>
+如果您想了解招聘情况, 请与综合管理部李小姐联系。<br/>
+联系电话 021-61601962或E-mail 至<a href="mailto:hzxzp@seahonor.com">hzxzp@seahonor.com</a>。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>

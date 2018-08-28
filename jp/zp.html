@@ -1,0 +1,105 @@
+<?php
+foreach ($loop as $key => $value) {
+	if ($value['dd']=='上海') {
+		$t1[$key]=$value;
+	}
+	if ($value['dd']=='深圳') {
+		$t2[$key]=$value;
+	}
+	if ($value['dd']=='北京') {
+		$t3[$key]=$value;
+	}
+}
+?>
+<!--#include file="header.html"-->
+	<div class="main">
+		<div class="container ptb100">
+			<div class="line-big">
+				<div class="xs2">
+<!--#include file="left.html"-->
+				</div>
+				<div class="xs10">
+					<div class="page">
+						<div class="rczp">
+							<div class="box-1">
+						{$my.zpjp}
+						
+							</div>
+							<div class="box-2">
+								<h3>採用一覧</h3>
+								<div class="tab">
+									<div class="tab-head">
+										<ul class="tab-nav">
+											<li class="active"><a href="#tab-1">上海</a></li>
+											<li><a href="#tab-2">深圳</a></li>
+											<li><a href="#tab-3">北京</a></li>
+										</ul>
+									</div>
+									<div class="tab-body">
+										<div class="tab-panel active" id="tab-1">
+											<table class="table table-hover">
+											<tr>
+												<th>職位</th>
+												<th>採用人数</th>
+												<th>勤務地</th>
+												<th>応募要項</th>
+											</tr>
+<!--foreach:{$t1 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">詳細 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-2">
+											<table class="table table-hover">
+											<tr>
+												<th>職位</th>
+												<th>採用人数</th>
+												<th>勤務地</th>
+												<th>応募要項</th>
+											</tr>
+<!--foreach:{$t2 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">詳細 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+										<div class="tab-panel" id="tab-3">
+											<table class="table table-hover">
+											<tr>
+												<th>职職位</th>
+												<th>採用人数</th>
+												<th>勤務地</th>
+												<th>応募要項</th>
+											</tr>
+<!--foreach:{$t3 $vo}-->
+<tr>
+<td>{$vo.title}</td>
+<td>{$vo.rs}</td>
+<td>{$vo.dd}</td>
+<td><a href="{$vo.aurl}">詳細 <img src="img/i-7.png" alt=""></a></td>
+</tr>
+<!--/loop--></table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box-3">
+								応募に関するお問い合わせ:上述の職位にご興味がある方は, 海之信グループ　担当: 総合管理部 李<br/>
+TEL:021-61601962 E-MAIL:<a href="mailto:hzxzp@seahonor.com">hzxzp@seahonor.com</a>。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#include file="footer.html"-->
+</body>
+</html>
